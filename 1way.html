@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var array = ["qua_du_du", "qua_muop", "qua_tao", "qua_xoai", "qua_cam"]; //veg=vegetable
+        // for (let i = 0; i < array.length; i++) {
+        //     console.log("index = " + i + ("_ _Value = ") + array[i]);
+        // }
+        // array.splice(0, 1)
+        // console.log(array)
+        //array 2: 
+        let student = [
+            {
+                id: 1,
+                name: "duc minh",
+                address: "hanoi"
+            },
+            {
+                id: 2,
+                name: "trung dung",
+                address: "thanh hoa"
+            },
+            {
+                id: 3,
+                name: "long doan",
+                address: "thai binh"
+            }
+        ]
+        console.log(student);
+        for (let i = 0; i < student.length; i++) {
+            if (student[i].id == 3) {
+                student.splice(i, 3)
+
+            }
+        }
+        console.log(student)
+        //push
+        student.push({ id: 4, name: "pham duc", address: "Ninh Binh" })
+        console.log(student[student.length - 1]) 
+        //unshift
+        student.unshift({ id: 0, name: "manh linh ", address: "Ha Tay" })
+        console.log(student[student.length - 4]) 
+    </script>
+</body>
+
+</html>
