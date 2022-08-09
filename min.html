@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" id="array_form">
+        <input type="text" id="txtValue" />
+        <input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();" />
+        <input type="button" id="btnDisplay" value="Display" onclick="display_array();" />
+        <input type="button" id="min_btn" value="Display_min" onclick="findMin();" />
+        <input type="button" id="max_btn" value="Display_max" onclick="findMax();" />
+        <div id="result"></div>
+        <div id="min"></div>
+        <div id="max"></div>
+        <h1> Please reload the web when you done it.</h1>
+    </form>
+    <script>
+        let x = 0;
+        let array = Array();
+        function add_element_to_array() {
+            array[x] = document.getElementById("txtValue").value;
+            alert("Element: " + array[x] + " Added at index " + x);
+            x++;
+            document.getElementById("txtValue ").value = "";
+        }
+        function display_array() {
+            let e = "<hr/>";
+            for (let i = 0; i < array.length; i++) {
+                e += "Element " + i + " = " + array[i] + "<br/>";
+            }
+            document.getElementById("result").innerHTML = e;
+        }
+        function findMin() {
+            var min = array[0];
+            for (var i = 1; i < array.length; ++i) {
+                if (array[i] < min) {
+                    min = array[i];
+                }
+            }
+            document.getElementById("min").innerHTML = min;
+        }
+        function findMax() {
+            var max = array[0];
+            for (var i = 1; i < array.length; ++i) {
+                if (array[i] > max) {
+                    max = array[i];
+                }
+            }
+            document.getElementById("max").innerHTML = max;
+        }
+        
+    </script>
+</body>
+
+</html>
